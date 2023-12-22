@@ -1,0 +1,31 @@
+.fixed-top {
+  top       : -40px;
+  transform : translateY(40px);
+  transition: transform .3s;
+}
+
+/* Cambiar el color predeterminado del texto a negro */
+.navbar-nav .nav-link {
+  color: rgb(33, 33, 33);
+}
+
+.navbar-brand {
+  color: rgb(33, 33, 33);
+}
+
+.btn-outline-secondary {
+  margin-right: 10px;
+}
+
+.img-logo {
+  margin-right: 10px;
+}
+
+.btn-dark {
+  margin-right: 10px;
+}
+
+.text-white {
+  color: #fff !important;
+  /* !important para asegurar que sobrescriba los estilos existentes */
+}
