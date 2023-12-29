@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             navbar.classList.remove('fixed-top');
             document.body.style.paddingTop = '0';
-            navbar.style.backgroundColor = 'transparent';
+            navbar.style.backgroundColor = 'rgb(255, 222, 249)';
                  // Cambiar el color del texto a negro
                  navbarbrand.style.color = 'rgba(0, 0, 0, 0.8)';
             // Restaurar el color del texto a negro

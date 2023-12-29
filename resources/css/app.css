@@ -29,3 +29,25 @@
   color: #fff !important;
   /* !important para asegurar que sobrescriba los estilos existentes */
 }
+
+#navbar_top{
+  background-color: rgb(255, 222, 249);
+}
+
+/*buscador*/
+#listaArticulos{
+  font-size: 30px;
+  margin-top: 20px;
+  list-style: none;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+li{
+  margin: 5px 0;
+}
+
+.filtro{
+  display: none;
+}
+/*fin buscador*/

@@ -21,12 +21,25 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    protected function autheticated()
+    {
+        if(Auth::user()->role_as == '1')
+        {
+            return redirect('admin/dasboard')->with('status', 'Bienvenido al panel de control');
+        }
+        else
+        {
+            return redirect('/home')->with('status', 'Inicio de sesión con éxito');
+        }
+    }
+
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    //protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
