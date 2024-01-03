@@ -4,62 +4,80 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Sale;
+use App\Models\tour;
+use App\Models\User;
+
 
 class SaleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
+        $sale = Sale::all();
+        return view('admin.sale.index', compact('sale'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+  
     public function create()
     {
-        //
+        $user = User::all();
+        $tour = Tour::all();
+        return view('admin.sale.add', compact('tour','user'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+   
     public function store(Request $request)
     {
-        //
+        $sale = new Sale();
+        $sale->price_total = $request->post('price_total');
+        $sale->users_id = $request->post('users_id');
+        $sale->tours_id = $request->post('tours_id');
+        $sale->save();
+
+        return redirect()->back()->with("success", "Agregado con exito!");
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        //
+        $sale  = Sale::find($id);
+        return view('admin.sale.delete', compact('sale'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $sale  = Sale::find($id);
+        $user = User::all();
+        $tour = Tour::all();
+        return view('admin.sale.update', compact('sale','user','tour'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $sale  = Sale::find($id);
+        $sale->price_total = $request->post('price_total');
+        $sale->cant_cliente = $request->post('cant_cliente');
+        $sale->tours_id = $request->post('tours_id');
+        $sale->users_id = $request->post('users_id');
+        $sale->save();
+
+        return redirect()->back()->with("success", "Actualizado con exito!");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $sale  = Sale::find($id);
+        $sale->delete();
+        return redirect()->route("Sale.index")->with("success", "Eliminado con exito!");
+    }
+
+    public function print(string $id)
+    {
+        $sale  = Sale::find($id);
+        return view('admin.sale.printsale', compact('sale'));
     }
 }

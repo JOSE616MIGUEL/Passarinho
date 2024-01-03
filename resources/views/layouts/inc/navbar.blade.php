@@ -27,17 +27,21 @@
             </button>
 
             <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
+            <!--
+                 <form class="app-search d-none d-lg-block">
                 <div class="position-relative">
                     <input type="text" class="form-control" placeholder="Search...">
                     <span class="bx bx-search-alt"></span>
                 </div>
             </form>
+            -->
+
 
             <div class="dropdown dropdown-mega d-none d-lg-block ms-2">
-                <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                    aria-haspopup="false" aria-expanded="false">
                     <span key="t-megamenu">Mega Menu</span>
-                    <i class="mdi mdi-chevron-down"></i> 
+                    <i class="mdi mdi-chevron-down"></i>
                 </button>
                 <div class="dropdown-menu dropdown-megamenu">
                     <div class="row">
@@ -98,7 +102,7 @@
 
             <div class="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="mdi mdi-magnify"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
@@ -107,9 +111,11 @@
                     <form class="p-3">
                         <div class="form-group m-0">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <input type="text" class="form-control" placeholder="Search ..."
+                                    aria-label="Recipient's username">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                    <button class="btn btn-primary" type="submit"><i
+                                            class="mdi mdi-magnify"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -123,9 +129,12 @@
                 </button>
             </div>
 
-            <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+            <!--
+                <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon waves-effect"
+                    id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     <i class="bx bx-bell bx-tada"></i>
                     <span class="badge bg-danger rounded-pill">3</span>
                 </button>
@@ -152,21 +161,24 @@
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
                                     <div class="font-size-12 text-muted">
-                                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar
+                                        </p>
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                key="t-min-ago">3 min ago</span></p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <a href="javascript: void(0);" class="text-reset notification-item">
                             <div class="d-flex">
-                                <img src="assets/images/users/avatar-3.jpg"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs"
+                                    alt="user-pic">
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1">James Lemire</h6>
                                     <div class="font-size-12 text-muted">
                                         <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                key="t-hours-ago">1 hours ago</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -181,8 +193,10 @@
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
                                     <div class="font-size-12 text-muted">
-                                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                        <p class="mb-1" key="t-grammer">If several languages coalesce the grammar
+                                        </p>
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                key="t-min-ago">3 min ago</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -190,13 +204,15 @@
 
                         <a href="javascript: void(0);" class="text-reset notification-item">
                             <div class="d-flex">
-                                <img src="assets/images/users/avatar-4.jpg"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs"
+                                    alt="user-pic">
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1">Salena Layfield</h6>
                                     <div class="font-size-12 text-muted">
-                                        <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                        <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine
+                                            occidental.</p>
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                key="t-hours-ago">1 hours ago</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -204,38 +220,49 @@
                     </div>
                     <div class="p-2 border-top d-grid">
                         <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                            <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span> 
+                            <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
                         </a>
                     </div>
                 </div>
             </div>
+            -->
+
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
-                        alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @if (Auth::user()->image)
+                        <img class="rounded-circle header-profile-user" src="{{ asset(Auth::user()->image) }}"
+                            alt="" alt="Header Avatar">
+                    @else
+                        <p>No hay imagen</p>
+                    @endif
+
+                    <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
+                    <a class="dropdown-item" href="{{ route('Configuration.index', Auth::user()->id) }}"><i
+                            class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Configuración
+                            del perfil</span></a>
+                    <!--
+                                        <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
                     <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                    -->
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
-                   
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Cerrar Sesión') }}
-                        </a>
-    
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+
+                    <a class="dropdown-item text-danger" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();"><i
+                            class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                        {{ __('Cerrar Sesión') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
 
                 </div>
             </div>

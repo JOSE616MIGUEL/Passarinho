@@ -10,9 +10,9 @@
                 <li class="menu-title" key="t-menu">Menu</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
-                        <i class="fa fa-tachometer" aria-hidden="true"></i>
-                        <span key="t-chat">Dashboard</span>
+                    <a href="{{ route('Dashboard.index') }}" class="waves-effect">
+                        <img src="{{ asset('icon/panel-control.png') }}" alt="" width="25px" height="25px">
+                        <span class="icon-nav" key="t-chat">Panel de Control</span>
                     </a>
                 </li>
 
@@ -22,8 +22,8 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span key="t-dashboards">Tours</span>
+                        <img src="{{ asset('icon/tours.png') }}" alt="" width="25px" height="25px">
+                        <span class="icon-nav" key="t-dashboards">Tours</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('Tour.index') }}" key="t-tui-calendar">Lista de Tours</a></li>
@@ -33,54 +33,43 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fa fa-plane" aria-hidden="true"></i>
-                        <span key="t-ecommerce">Destinos</span>
+                        <img src="{{ asset('icon/destinos.png') }}" alt="" width="25px" height="25px">
+                        <span class="icon-nav" key="t-ecommerce">Destinos</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-products.html" key="t-products">Products</a></li>
-                        <li><a href="ecommerce-product-detail.html" key="t-product-detail">Product Detail</a></li>
-                        <li><a href="ecommerce-orders.html" key="t-orders">Orders</a></li>
-                        <li><a href="ecommerce-customers.html" key="t-customers">Customers</a></li>
-                        <li><a href="ecommerce-cart.html" key="t-cart">Cart</a></li>
-                        <li><a href="ecommerce-checkout.html" key="t-checkout">Checkout</a></li>
-                        <li><a href="ecommerce-shops.html" key="t-shops">Shops</a></li>
-                        <li><a href="ecommerce-add-product.html" key="t-add-product">Add Product</a></li>
+                        <li><a href="{{ route('Place.index') }}" key="t-products">Lista Completa</a></li>
+                        <li><a href="{{ route('Place.create') }}" key="t-product-detail">Agregar</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="fa-solid fa-image"></i>
-                        <span key="t-crypto">Galería</span>
+                        <img src="{{ asset('icon/galeria.png') }}" alt="" width="25px" height="25px">
+                        <span class="icon-nav" key="t-crypto">Galería</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="crypto-wallet.html" key="t-wallet">Wallet</a></li>
-                        <li><a href="crypto-buy-sell.html" key="t-buy">Buy/Sell</a></li>
-                        <li><a href="crypto-exchange.html" key="t-exchange">Exchange</a></li>
-                        <li><a href="crypto-lending.html" key="t-lending">Lending</a></li>
-                        <li><a href="crypto-orders.html" key="t-orders">Orders</a></li>
-                        <li><a href="crypto-kyc-application.html" key="t-kyc">KYC Application</a></li>
-                        <li><a href="crypto-ico-landing.html" key="t-ico">ICO Landing</a></li>
+                        <li><a href="{{ route('Galery.index') }}" key="t-wallet">Lista Completa</a></li>
+                        <li><a href="{{ route('Galery.create') }}" key="t-buy">Agregar</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <li>
-                        <a href="chat.html" class="waves-effect">
-                          <img id="img-ventas" src="../img/shopping.svg" alt="">
-                            <span key="t-chat">Ventas</span>
+                        <a href="{{ route('Sale.index') }}" class="waves-effect">
+                            <img src="{{ asset('icon/venta.png') }}" alt="" width="25px" height="25px">
+                            <span class="icon-nav" key="t-chat">Ventas</span>
                         </a>
                     </li>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bxs-user-detail"></i>
-                        <span key="t-contacts">Contactos</span>
+                        <img src="{{ asset('icon/contacto.png') }}" alt="" width="25px" height="25px">
+                        <span class="icon-nav" key="t-contacts">Contactos</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="contacts-grid.html" key="t-user-grid">Agregar contacto</a></li>
-                        <li><a href="contacts-list.html" key="t-user-list">Lista de contactos</a></li>
+                        <li><a href="{{ route('Contact.create') }}" key="t-user-grid">Agregar contacto</a></li>
+                        <li><a href="{{ route('Contact.index') }}" key="t-user-list">Lista de contactos</a></li>
                     </ul>
                 </li>
             </ul>

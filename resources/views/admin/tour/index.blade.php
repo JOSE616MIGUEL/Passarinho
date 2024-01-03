@@ -47,8 +47,15 @@
                                         </td>
                                         <td>{{ $item->name }}</td>
                                         <td>
-                                            <img src="{{ asset($item->image) }}" alt="image" width="50px"
-                                                height="50px" />
+                                            @if ($item->image)
+                                                <img src="{{ asset($item->image) }}" alt="" width="100px"
+                                                    height="100px">
+                                                <br>
+                                            @else
+                                                <h5>No hay imágenes</h5>
+                                                <br>
+                                            @endif
+
                                         </td>
                                         <td>
                                             {{ $item->price }}
@@ -75,13 +82,11 @@
                                     $contandor++;
                                     ?>
                                 @empty
-                                 
-                                            <div>
-                                                <h1>No hay productos</h1>
-                                            </div>
-                                  
-
-                       
+                                    <!--
+                                        <div>
+                                            <h1>No hay productos</h1>
+                                        </div>
+                                        -->
                                 @endforelse
                             </tbody>
                         </table>

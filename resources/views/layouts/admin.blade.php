@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
     <!-- End Desing Datatables Jquery-->
+
+
 </head>
 
 <body data-sidebar="dark">
@@ -32,7 +34,7 @@
         @include('layouts.inc.navbar')
         @include('layouts.inc.sidebar')
 
-        
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -51,6 +53,48 @@
     <!--Theme dark or light-->
     @include('layouts.inc.configuration')
     <!--End Theme dark or light-->
+
+        <!--.Boleta de compra-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write(
+                '<script src="{{ asset('
+                          assets / bower_components / jquery / dist / jquery.min.js ') }}"><\/script>'
+                )
+        </script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
+        <!--EndBoleta de compra-->
+    
+        <!--Calculo de cantidad de pasajeros-->
+        <script>
+            var inicio = 1;
+            var price_tour = document.getElementById('price_tour').value; //se inicializa una variable en 0
+        
+            function aumentar() { // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
+        
+                var cantidad = document.getElementById('cantidad').value = ++inicio;
+        
+                //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
+            }
+        
+            function disminuir() { // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+        
+        
+                if (inicio <= 1) {
+                    var cantidad = document.getElementById('cantidad').value = 1;
+                } else {
+                    var cantidad = document.getElementById('cantidad').value = --inicio;
+                } //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+            }
+        
+            function total() {
+                var cantidad = document.getElementById('cantidad')
+                    .value; // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+                var total_price = document.getElementById('total_price').value = price_tour * cantidad;
+                //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+            }
+            </script>
+            <!--EndCalculo de cantidad de pasajeros-->
 
     <!-- Dependency datatables.jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
@@ -85,20 +129,20 @@
                 dom: 'Bfrtip',
                 buttons: [{
                         extend: 'excelHtml5',
-                        text: '<img src="{{ asset('icon/excel.png') }}" alt="Excel" height="30px" /> Exportar a Excel',
-                        titleAttr: 'Exportar a Excel',
+                        text: '<img src="{{ asset('icon/excel.png') }}" alt="Excel" height="30px" />',
+                        titleAttr: '',
                         className: 'btn btn-info'
                     },
                     {
                         extend: 'pdfHtml5',
-                        text: '<img src="{{ asset('icon/pdf.png') }}" alt="PDF" height="30px" /> Exportar a PDF',
-                        titleAttr: 'Exportar a PDF',
+                        text: '<img src="{{ asset('icon/pdf.png') }}" alt="PDF" height="30px" />',
+                        titleAttr: '',
                         className: 'btn btn-info'
                     },
                     {
                         extend: 'print',
-                        text: '<img src="{{ asset('icon/imprimir.png') }}" alt="Imprimir" height="30px" /> Imprimir',
-                        titleAttr: 'Imprimir',
+                        text: '<img src="{{ asset('icon/imprimir.png') }}" alt="Imprimir" height="30px" />',
+                        titleAttr: '',
                         className: 'btn btn-info'
                     },
                 ]
@@ -113,6 +157,8 @@
         });
     </script>
     <!--End Dependency datatables.jquery -->
+
+
 </body>
 
 </html>

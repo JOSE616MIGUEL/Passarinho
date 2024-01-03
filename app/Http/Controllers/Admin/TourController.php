@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Notifications\Notificacion;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\TourAgregado;
 use App\Models\Tour;
 
 class TourController extends Controller
@@ -42,7 +45,6 @@ class TourController extends Controller
             $tour->image = $url. $nombreimagen;
         }
         $tour->save();
-
         return redirect()->back()->with("success", "Agregado con exito!");
     }
 

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
+            $table->double('price_total')->nullable();
+            $table->double('cant_cliente')->nullable();
+            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('tours_id');
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('tours_id')->references('id')->on('tours')->onDelete('cascade');
             $table->timestamps();
         });
     }
